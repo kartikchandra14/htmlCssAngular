@@ -1,0 +1,44 @@
+<!-- 
+1>> https://www.npmjs.com/package/ngx-slick-carousel
+
+2>> npm install jquery --save
+    npm install slick-carousel --save
+    npm install ngx-slick-carousel --save
+
+3>> import { SlickCarouselModule } from 'ngx-slick-carousel';
+
+4>>===================================In angular.json ========================================
+      "styles": [
+    ...
+    "node_modules/slick-carousel/slick/slick.scss",
+    "node_modules/slick-carousel/slick/slick-theme.scss",
+    ...
+  ]
+    "scripts": [
+    ...
+    "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/slick-carousel/slick/slick.min.js",
+    ...
+  ]
+=========================================================================================
+
+
+ -->
+
+<p>carousel works!</p>
+<ngx-slick-carousel class="carousel" 
+#slickModal="slick-carousel" 
+[config]="slideConfig" 
+(init)="slickInit($event)"
+(breakpoint)="breakpoint($event)"
+(afterChange)="afterChange($event)"
+(beforeChange)="beforeChange($event)">
+<div ngxSlickItem *ngFor="let slide of slides" class="slide">
+<img src="{{ slide.img }}" alt="" width="100%">
+</div>
+</ngx-slick-carousel>
+
+<button (click)="addSlide()">Add</button>
+<button (click)="removeSlide()">Remove</button>
+<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+<button (click)="slickModal.unslick()">unslick</button>

@@ -542,7 +542,42 @@
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop2">
         <button type="button" class="btn btn-outline-dark" (click)="moveToPercentagePage()">Percentage</button>
       </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop2">
+        <button type="button" class="btn btn-outline-dark" (click)="moveToCdkDragDropPage()">cdk drag drop</button>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop2">
+        <button type="button" class="btn btn-outline-dark" (click)="moveToSlickCarousel()">ngx slick carousel</button>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop2">
+        <button type="button" class="btn btn-outline-dark" routerLink="searchUsingDebounce">
+          search Using RXJS debounce
+        </button>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop2">
+        <button type="button" class="btn btn-outline-dark" routerLink="jsMethods">
+          js Methods
+        </button>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop2">
+        <button type="button" class="btn btn-outline-dark" routerLink="dateConcepts">
+          date concepts
+        </button>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop2">
+        <button type="button" class="btn btn-outline-dark" routerLink="toast">
+          custom toast or snackbar
+        </button>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 marginTop2">
+        <button type="button" class="btn btn-outline-dark" routerLink="lightbox">
+          ngx-lightbox - pop up image
+        </button>
+      </div>
+      
     </div>
   </div>
+</div>
+<div>
+  <pdf-viewer [src]="src" [original-size]="false" ></pdf-viewer>
 </div>
 <router-outlet></router-outlet>

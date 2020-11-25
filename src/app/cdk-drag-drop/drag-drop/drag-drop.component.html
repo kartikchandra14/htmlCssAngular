@@ -1,0 +1,18 @@
+<!-- 
+1>> install first 
+    https://www.npmjs.com/package/@angular/cdk
+    npm install @angular/cdk --save
+
+2>> import { DragDropModule } from '@angular/cdk/drag-drop';
+
+3>>Guide from source
+https://www.tutorialspoint.com/angular7/angular7_materials_cdk_drag_and_drop.htm
+ -->
+
+
+ <h3>Angular 7 - Drag and Drop Module</h3>
+<div cdkDropList #personList = "cdkDropList" [cdkDropListData] = "personaldetails"  [cdkDropListConnectedTo] = "[userlist]" class = "example-list" (cdkDropListDropped) = "onDrop($event)" >  
+   <div *ngFor = "let item of personaldetails; let i = index" class = "divlayout" cdkDrag>
+      {{item.name}}
+   </div >
+</div>

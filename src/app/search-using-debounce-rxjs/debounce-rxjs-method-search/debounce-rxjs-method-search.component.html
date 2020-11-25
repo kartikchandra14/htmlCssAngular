@@ -1,0 +1,12 @@
+
+<!-- Debuounce Serach with 400ms rate of debouncing using an Subject an extended version of observable  -->
+<!-- Use Debuounce method of Rxjs library -->
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <p>debounce-rxjs-method-search works!</p>
+        <input name="searchText"  [(ngModel)]="searchText" (ngModelChange)="searchInput.next($event)">
+        <div *ngFor="let i of searchResults">
+            {{i.name}}
+        </div>
+    </div>
+</div>

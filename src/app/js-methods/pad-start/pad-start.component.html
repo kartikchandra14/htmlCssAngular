@@ -1,0 +1,21 @@
+<p>pad-start works!</p>
+<!-- padStart is used for applying number before or after a specific deigits u want -->
+<!-- like ==> for 1 it can give 1 & for 11 it can give 11 [MEANS it give 2 digit always for whatever the input is] -->
+<!-- i used in  Date. like Date is 1-12-1996 BUT backend wants 01-12-1996. So it is 1 use case. -->
+
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="jumbotron">
+            <input [(ngModel)]="numberInput" name="numberInput" (ngModelChange)="changeInputNumber($event)">
+            <div>
+                <strong>Number is: </strong>  {{numberInput}}
+            </div>
+            <div>
+                <strong>After padStart (of 2 digit) it is: </strong>{{showNumber}}
+            </div>
+            <div>
+                <strong>After padStart (of 3 digit) it is: </strong>{{showNumberUsingPadStartOfThreeDigit}}
+            </div>
+        </div>
+    </div>
+</div>

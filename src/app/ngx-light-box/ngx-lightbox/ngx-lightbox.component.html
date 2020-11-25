@@ -1,0 +1,7 @@
+<p>ngx-lightbox works!</p>
+
+{{ albums | json }}
+<div *ngFor="let image of albums; let i=index">
+    <img [src]="image.thumb" (click)="open(i, albums)" />
+  </div>
+  
